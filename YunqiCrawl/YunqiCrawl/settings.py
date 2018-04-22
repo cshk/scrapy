@@ -83,9 +83,13 @@ USER_AGENTS = [
 #}
 #使用scrapy_redis的调度器
 
-SCHEDULER_PERSIST = True
+
+#指定队列
+SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.SpiderPriorityQueue'
 SCHEDULER = "scrapy_redis.scheduler.Scheduler"
 DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+#爬虫关闭最大空闲时间
+SCHEDULER_IDLE_BEFORE_CLOSE = 10
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
@@ -93,8 +97,9 @@ DOWNLOADER_MIDDLEWARES = {
 }
 MONGO_URI = '127.0.0.1'
 MONGO_DATABASE='yunqi'
-REDIS_HOST='140.143.226.245'
+REDIS_HOST='127.0.0.1'
 REDIS_PORT=6379
+LOG_LEVEL = 'DEBUG'
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
 #EXTENSIONS = {
