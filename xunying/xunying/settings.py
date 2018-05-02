@@ -112,7 +112,11 @@ ITEM_PIPELINES = {
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+<<<<<<< HEAD
 MONGO_URI='140.143.226.245'
+=======
+MONGO_URI='127.0.0.1'
+>>>>>>> 5f737b3053ae29556cc65a08e2afc2119486f028
 MONGO_DB='xunying'
 
 REDIS_HOST='127.0.0.1'
