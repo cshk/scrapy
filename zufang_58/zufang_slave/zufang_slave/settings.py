@@ -80,14 +80,15 @@ COOKIES_ENABLED = False
 
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
-#SPIDER_MIDDLEWARES = {
+# SPIDER_MIDDLEWARES = {
 #    'zufang_slave.middlewares.ZufangSlaveSpiderMiddleware': 543,
-#}
+# }
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
-   'zufang_slave.middlewares.RandomUserAgent': 543,
+   'zufang_slave.middlewares.ProxyMiddleware': 4,
+   'zufang_slave.middlewares.RandomUserAgent': 5,
 }
 
 # Enable or disable extensions
