@@ -117,3 +117,8 @@ class RandomUserAgent(object):
 
     def process_request(self,request,spider):
         request.headers.setdefault('User-Agent', random.choice(self.agents))
+
+class ProxyMiddleware(object):
+    def process_request(self, request, spider):
+        ip = requests.get('http://127.0.0.1:6666/random').text()
+        request.meta['proxy'] = "https://"+ip
