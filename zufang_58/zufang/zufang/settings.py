@@ -86,9 +86,10 @@ COOKIES_ENABLED = False
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#   'zufang.middlewares.RandomUserAgent': 2,
-#}
+DOWNLOADER_MIDDLEWARES = {
+  'zufang.middlewares.RandomUserAgent': 2,
+  'zufang.middlewares.ProxyMiddleware': 3,
+}
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
